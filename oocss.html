@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="Preso on CSS Preprocessors">
+		<meta name="author" content="Alex Meijer - 2013">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/talks/oocss.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>OOCSS</h1>
+					<p>
+						<small><a href="http://www.ameijer.nl">Alex Meijer</a> - 26 April 2013</small>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>OO What??</h2>
+						<p cite="http://www.vanseodesign.com/css/css-preprocessors/">
+							Object Orientated Cascading Style Sheets<br/>
+						</p>
+					</section>
+					<section>
+						<ul>
+							<li>Nicole Sullivan <span class="fragment">(2011)</span></li>
+							<li class="fragment">Fronteers <span class='fragment'>(Rijksmuseum)</span></li>
+							<li class='fragment'>Redesign NOS.nl</li>
+						</ul>
+					</section>
+					<section>
+						<h4>"There's a class for that"</h4>
+						<img src="oocss/rijksmuseum.png" alt="">
+					</section>
+					<section>
+						<h3> Many roads lead to rome </h3>
+					</section>
+				</section>
+
+				<section>
+					<h2>Principles of OOCSS</h2>
+					<ul>
+						<li class="fragment">Seperation of Structure from Skin</li>
+						<li class="fragment">Seperation of Containers and Content</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Seperation of Structure from Skin</h2>
+					</section>
+					<section>
+						<img src="oocss/structure-skin.png" alt="">
+					</section>
+					<section>
+						<img src="oocss/oo-structure-skin.png" alt="">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Seperation of Containers and Content</h2>
+					</section>
+					<section>
+						<img src="oocss/container-content.png" alt="">
+					</section>
+					<section>
+						<blockquote>When we use OOCSS’s class-based module building, we ensure that our styles are not dependent on any containing element. This means they can then be reused anywhere in the document, regardless of structural context.</blockquote>
+					</section>
+					<section>
+						<img src="oocss/oo-container-content.png" alt="">
+					</section>
+				</section>
+
+				<section>
+					<h2>Advantages</h2>
+					<ul>
+						<li>Reuse of css rules <span class='fragment'>(faster &amp; smaller files)</span></li>
+						<li class="fragment">Maintainable</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h1>HANDS ON!!!</h1>
+					</section>
+					<section>
+						<img src="oocss/lists.png" alt="">
+					</section>
+					<section>
+						<img src="oocss/lists-marked.png" alt="">
+					</section>
+				</section>
+
+				<section>
+					<h3>Tips</h3>
+					<ul>
+						<li>Plan carefully!</li>
+						<li class="fragment">Avoid the descendent selector (.list li)</li>
+						<li class="fragment">HTML elements for styling (h1.title)</li>
+						<li class="fragment">Media Query modules, not pages</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Misconceptions</h3>
+					<ul>
+						<li>Preprocessors == OOCSS</li>
+						<li class="fragment">Can't use #ids</li>
+						<li class="fragment">Big projects/websites</li>
+						<li class="fragment"> </li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Reading...</h3>
+					<ul>
+						<li>Scalable and Modular Architecture for CSS - www.smacss.com</li>
+						<li class="fragment">OOCSS - http://oocss.org/ </li>
+						<li class="fragment">inuit css - http://inuitcss.com/</li>
+						<li class="fragment">Nicole Sullivan - @stubbornella</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Questions?</h2>
+					<a href="http://twitter.com/ameijernl">@AmeijerNL</a>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
